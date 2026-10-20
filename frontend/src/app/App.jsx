@@ -16,6 +16,8 @@ function App() {
     e.preventDefault();
     const name = nameInput.trim();
     if (name) setUsername(name);
+
+    window.history.pushState(null, "", `?username=${name}`);
   };
 
   const handleMount = (editor) => {
